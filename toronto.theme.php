@@ -10,5 +10,7 @@ return [
     'toronto',
     '_fallback_',
   ],
-  'excludes' => [],
+  'excludes' => [
+    'bootstrap',
+  ],
 ];
