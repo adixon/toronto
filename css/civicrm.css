@@ -832,7 +832,6 @@ input.crm-form-entityref {
   background-color: #f1f8eb;
   border: 1px solid #b0d730;
   color: #3e3e3e;
-  font-size: 13px;
   margin: 0 0 8px;
   padding: 4px;
 }
@@ -3929,4 +3928,14 @@ span.crm-status-icon {
 }
 .dedupe-rules-dialog label > * {
   margin-left: 30px;
+}
+
+/* fixing oliveiro */
+
+#crm-main-content-wrapper a.button {
+	height: auto;
+}
+#crm-main-content-wrapper .messages {
+	height: auto;
+	min-height: 0;
 }
