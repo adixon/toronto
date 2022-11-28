@@ -101,7 +101,7 @@ input.crm-form-checkbox + label {
   margin: 0 0 1em;
   border-collapse: collapse;
   width: 100%;
-  font-size: 13px;
+  font-size: small;
 }
 
 .crm-container tr {
@@ -117,7 +117,7 @@ input.crm-form-checkbox + label {
   border-style: solid;
   border-width: 1px 1px 2px;
   color: #a7a7a7;
-  font-size: 13px;
+  font-size: small;
   font-weight: bold;
   padding: 4px;
   text-align: left;
@@ -246,7 +246,7 @@ input.crm-form-entityref {
 .crm-container .crm-form-block {
   padding: 4px;
   margin-bottom: 4px;
-  font-size: 13px;
+  font-size: small;
   background-color: #efefe5;
   color: #3e3e3e;
 }
@@ -274,7 +274,7 @@ input.crm-form-entityref {
 }
 
 .crm-container .add-remove-link {
-  font-size: .9em;
+  font-size: small;
 }
 
 /* Ensures max-width is reset to css default for the images in the maps */
@@ -294,7 +294,7 @@ input.crm-form-entityref {
 
 .crm-container td.compressed select,
 .crm-container td.compressed input {
-  font-size: 0.90em;
+  font-size: small;
   font-weight: bold;
 }
 
@@ -352,11 +352,11 @@ input.crm-form-entityref {
   padding-top: 6px;
   margin-bottom: 28px;
 }
-/*
+
 .crm-container fieldset {
   background: none;
-  padding: 4px 0;
-  margin: 10px 0;
+  padding: 4px 20px;
+  margin: 20px 0;
   border: none;
   border-top: 1px solid #cfcec3;
 }
@@ -365,6 +365,11 @@ input.crm-form-entityref {
   border-top: none;
 }
 
+.crm-container fieldset legend {
+  padding: 20px 0 12px 0;
+}
+  
+/*
 .crm-container fieldset legend {
   display: block;
   font-size: 14px;
@@ -377,7 +382,8 @@ input.crm-form-entityref {
   position: relative;
   text-indent: 0;
   width: auto;
-} */
+} 
+*/
 
 .crm-container fieldset.form-layout {
   margin: .25em 0 .5em 0;
@@ -668,9 +674,20 @@ input.crm-form-entityref {
 
 .crm-container .crm-error,
 .crm-container .crm-inline-error {
-  background: #fbe3e4 none repeat scroll 0 0;
   border: none;
   color: #8a1f11;
+  font-size: 90%;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .crm-container label.crm-inline-error {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .crm-container label.crm-inline-error {
+    margin-left: 0.5em;
+  }
 }
 .crm-container .crm-error {
   padding: 4px;
@@ -1870,7 +1887,6 @@ input.crm-form-entityref {
   text-shadow: 0 1px 0 black;
   background: #696969;
   color: #fff;
-  font-size: 13px;
   font-weight: normal;
   margin: 0 6px 0 0;
   padding: 2px 6px;
@@ -3032,7 +3048,7 @@ tbody.scrollContent tr.alternateRow {
 }
 /* Style autocomplete results */
 .crm-container .select2-results {
-  font-size: 12px;
+  font-size: small;
   padding: 0;
   text-align: left;
 }
@@ -3599,13 +3615,8 @@ span.crm-status-icon {
 #crm-container.crm-public .label,
 #crm-container.crm-public .price-field-amount {
   padding-top: 6px;
-  font-size: 15px;
 }
 
-.crm-container.crm-public .select2-container,
-.crm-container.crm-public .select2-results {
-  font-size: 14px;
-}
 .crm-container.crm-public .select2-container * {
   box-sizing: content-box;
 }
@@ -3638,7 +3649,6 @@ span.crm-status-icon {
 #crm-container.crm-public .calc-value,
 #crm-container.crm-public .content {
   padding-top: 6px;
-  font-size: 15px;
 }
 
 #crm-container.crm-public .crm-section,
@@ -3682,7 +3692,7 @@ span.crm-status-icon {
 
 #crm-container.crm-public #premiums-listings .premium .premium-short-content {
   text-align: center;
-  font-size: 20px;
+  font-size: 125%;
   font-weight: bold;
   padding: 20px;
 }
@@ -3706,25 +3716,25 @@ span.crm-status-icon {
 
 #crm-container.crm-public #premiums-listings .premium .premium-full .premium-full-title {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 150%;
   font-weight: bold;
   padding: 20px;
 }
 
 #crm-container.crm-public #premiums-listings .premium .premium-full .premium-full-min {
-  font-size: .9em;
+  font-size: small
   font-style: italic;
 }
 
 #crm-container.crm-public #premiums-listings .premium.premium-no_thanks .premium-short {
   text-align: center;
-  font-size: 1.3em;
+  font-size: large;
   padding: 10px;
 }
 
 #crm-container.crm-public #premiums-listings .premium.premium-no_thanks .premium-full {
   text-align: center;
-  font-size: 1.3em;
+  font-size: large;
   font-weight: bold;
   padding: 10px;
 }
@@ -3749,7 +3759,6 @@ span.crm-status-icon {
 }
 
 #crm-container.crm-public .price-set-row {
-  font-size: 15px;
   margin-bottom: 5px;
 }
 
@@ -3787,7 +3796,6 @@ span.crm-status-icon {
 #crm-container .price-set-row span.sold-out-option .crm-price-amount-amount {
   font-style: italic !important;
   font-weight: normal !important;
-  font-size: 15px;
   color: #666 !important;
 }
 
@@ -3933,9 +3941,9 @@ span.crm-status-icon {
 /* fixing oliveiro */
 
 #crm-main-content-wrapper a.button {
-	height: auto;
+  height: auto;
 }
 #crm-main-content-wrapper .messages {
-	height: auto;
-	min-height: 0;
+  height: auto;
+  min-height: 0;
 }
