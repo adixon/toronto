@@ -1,0 +1,4 @@
+/* additions for radix boostrap 4 theme */
+form.CRM_Contribute_Form_Contribution_Main {
+  max-width: 60rem;
+}

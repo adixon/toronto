@@ -106,3 +106,28 @@ function toronto_civicrm_entityTypes(&$entityTypes): void {
 //  ]);
 //  _toronto_civix_navigationMenu($menu);
 //}
+//
+
+function _toronto_civicrm_css_url($themes, $themeKey, $cssExt, $cssFile) {
+  switch ("{$cssExt}/{$cssFile}") {
+    case 'civicrm/css/civicrm.css':
+      return [\Civi::service("asset_builder")->getUrl("toronto-civicrm.css", ['themeKey' => $themeKey])];
+    default:
+      return \Civi\Core\Themes\Resolvers::simple($themes, $themeKey, $cssExt, $cssFile);
+
+  }
+}
+
+function toronto_civicrm_buildAsset($asset, $params, &$mimeType, &$content) {
+  if ($asset !== 'toronto-civicrm.css') return;
+
+  $rawCss = file_get_contents(E::path('css/civicrm.css'))
+    . "\n" . file_get_contents(E::path('css/radix4.css'));
+
+  $vars = [
+    '{{CIVICRM_URL}}'=> Civi::paths()->getUrl('[civicrm.root]/.'),
+    '{{TORONTO_URL}}' => E::url(),
+  ];
+  $mimeType = 'text/css';
+  $content = strtr($rawCss, $vars);
+}
